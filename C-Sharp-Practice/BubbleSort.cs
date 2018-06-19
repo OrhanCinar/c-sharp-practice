@@ -2,7 +2,7 @@
 
 namespace C_Sharp_Practice
 {
-    public class Class1
+    public class BubbleSort
     {
     }
 }
