@@ -5,4 +5,15 @@
     <RootNamespace>C_Sharp_Practice</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Lists\" />
+    <Folder Include="Heaps\" />
+    <Folder Include="HashingFunctions\" />
+    <Folder Include="HashTables\" />
+    <Folder Include="Graphs\" />
+    <Folder Include="Trees\" />
+    <Folder Include="SortedCollections\" />
+    <Folder Include="PriorityQueues\" />
+  </ItemGroup>
+
 </Project>
