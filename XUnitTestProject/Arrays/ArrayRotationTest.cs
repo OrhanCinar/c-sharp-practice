@@ -26,5 +26,13 @@ namespace XUnitTestProject.Arrays
             var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Test_ArrayRoration3()
+        {
+            var result = _arrayRotation.ArrayRoration3(new[] { 1, 2, 3, 4, 5, 6, 7 }, 2, 7);
+            var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
+            Assert.Equal(expected, result);
+        }
     }
 }

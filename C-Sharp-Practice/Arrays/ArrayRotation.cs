@@ -1,4 +1,6 @@
-﻿namespace C_Sharp_Practice.Arrays
+﻿using System;
+
+namespace C_Sharp_Practice.Arrays
 {
     public class ArrayRotation
     {
@@ -61,6 +63,52 @@
             input[i] = tmp;
 
             return input;
+        }
+
+        /// <summary>
+        /// Juggling Algorithm
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="d"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public int[] ArrayRoration3(int[] input, int d, int n)
+        {
+            int i, j, k, temp;
+
+            for (i = 0; i < gcd(d,n); i++)
+            {
+                temp = input[i];
+                j = i;
+                while (true)
+                {
+                    k = j + d;
+                    if (k >= n)
+                    {
+                        k = k - n;
+                    }
+
+                    if (k == i)
+                    {
+                        break;
+                    }
+
+                    input[j] = input[k];
+                    j = k;
+                }
+                input[j] = temp;
+            }
+
+            return input;
+        }
+
+        private int gcd(int a, int b)
+        {
+            if (b == 0)
+            {
+                return a;
+            }
+            return gcd(b, a % b);
         }
     }
 }
