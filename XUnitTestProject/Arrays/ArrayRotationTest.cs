@@ -12,11 +12,19 @@ namespace XUnitTestProject.Arrays
         ArrayRotation _arrayRotation = new ArrayRotation();
 
         [Fact]
-        public void Test_BubbleSortAsc()
+        public void Test_ArrayRoration1()
         {
             var result = _arrayRotation.ArrayRoration1(new[] { 1, 2, 3, 4, 5, 6, 7 },2,7);
-            var expectedAsc = new[] { 3, 4, 5, 6, 7, 1, 2 };
-            Assert.Equal(expectedAsc, result);
+            var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_ArrayRoration2()
+        {
+            var result = _arrayRotation.ArrayRoration2(new[] { 1, 2, 3, 4, 5, 6, 7 }, 2, 7);
+            var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
+            Assert.Equal(expected, result);
         }
     }
 }
