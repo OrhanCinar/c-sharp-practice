@@ -12,6 +12,7 @@ namespace XUnitTestProject.Arrays
         ArrayRotation _arrayRotation = new ArrayRotation();
         ArrayRotationBlockSwap _arrayRotationBlock = new ArrayRotationBlockSwap();
         ArrayRotationReversal _arrayRotationReversal = new ArrayRotationReversal();
+        ArrayRotationCyclically _arrayRotationCyclically = new ArrayRotationCyclically();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -50,6 +51,14 @@ namespace XUnitTestProject.Arrays
         {
             var result = _arrayRotationReversal.ReverseArray(new[] { 1, 2, 3, 4, 5, 6, 7 }, 2, 7);
             var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Test_ArrayRotationCyclically()
+        {
+            var result = _arrayRotationCyclically.RotateArray(new[] { 1, 2, 3, 4, 5});
+            var expected = new[] { 5, 1, 2, 3, 4 };
             Assert.Equal(expected, result);
         }
     }
