@@ -1,7 +1,4 @@
 ﻿using C_Sharp_Practice.Arrays;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace XUnitTestProject.Arrays
@@ -20,7 +17,7 @@ namespace XUnitTestProject.Arrays
         [Fact]
         public void Test_ArrayRoration1()
         {
-            var result = _arrayRotation.ArrayRoration1(new[] { 1, 2, 3, 4, 5, 6, 7 },2,7);
+            var result = _arrayRotation.ArrayRoration1(new[] { 1, 2, 3, 4, 5, 6, 7 }, 2, 7);
             var expected = new[] { 3, 4, 5, 6, 7, 1, 2 };
             Assert.Equal(expected, result);
         }
@@ -60,7 +57,7 @@ namespace XUnitTestProject.Arrays
         [Fact]
         public void Test_ArrayRotationCyclically()
         {
-            var result = _arrayRotationCyclically.RotateArray(new[] { 1, 2, 3, 4, 5});
+            var result = _arrayRotationCyclically.RotateArray(new[] { 1, 2, 3, 4, 5 });
             var expected = new[] { 5, 1, 2, 3, 4 };
             Assert.Equal(expected, result);
         }
@@ -68,17 +65,25 @@ namespace XUnitTestProject.Arrays
         [Fact]
         public void Test_CheckArrayPairSum()
         {
-            var result = _arrayPairSum.CheckArrayPairSum(new[] { 11, 15, 6, 8, 9, 10 },16);
-            
+            var result = _arrayPairSum.CheckArrayPairSum(new[] { 11, 15, 6, 8, 9, 10 }, 16);
+
             Assert.True(result);
         }
 
         [Fact]
         public void Test_ArrayRotationFindMaxSum()
         {
-            var result = _arrayRotationFindMaxSum.GetMaxSum(new[] { 10, 1, 2, 3, 4,5, 6, 7, 8, 9});
+            var result = _arrayRotationFindMaxSum.GetMaxSum(new[] { 10, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
 
             Assert.Equal(330, result);
+        }
+
+        [Fact]
+        public void Test_ArrayRotationFindMaxSum2()
+        {
+            var result = _arrayRotationFindMaxSum.GetMaxSum2(new[] { 8, 3, 1, 2 });
+
+            Assert.Equal(29, result);
         }
     }
 }
