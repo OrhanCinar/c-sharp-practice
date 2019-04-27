@@ -14,6 +14,8 @@ namespace XUnitTestProject.Arrays
         ArrayRotationReversal _arrayRotationReversal = new ArrayRotationReversal();
         ArrayRotationCyclically _arrayRotationCyclically = new ArrayRotationCyclically();
         ArrayPairSum _arrayPairSum = new ArrayPairSum();
+        ArrayRotationFindMaxSum _arrayRotationFindMaxSum = new ArrayRotationFindMaxSum();
+
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -68,7 +70,15 @@ namespace XUnitTestProject.Arrays
         {
             var result = _arrayPairSum.CheckArrayPairSum(new[] { 11, 15, 6, 8, 9, 10 },16);
             
-            Assert.Equal(true, result);
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void Test_ArrayRotationFindMaxSum()
+        {
+            var result = _arrayRotationFindMaxSum.GetMaxSum(new[] { 10, 1, 2, 3, 4,5, 6, 7, 8, 9});
+
+            Assert.Equal(330, result);
         }
     }
 }
