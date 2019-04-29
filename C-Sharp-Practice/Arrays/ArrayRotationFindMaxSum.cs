@@ -43,7 +43,6 @@ namespace C_Sharp_Practice.Arrays
                 {
                     int index = (i + j) % length;
                     curr_sum += j * arr[index];
-
                 }
 
                 result = Math.Max(result, curr_sum);
