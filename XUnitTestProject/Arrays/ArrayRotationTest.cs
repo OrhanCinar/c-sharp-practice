@@ -13,7 +13,7 @@ namespace XUnitTestProject.Arrays
         ArrayPairSum _arrayPairSum = new ArrayPairSum();
         ArrayRotationFindMaxSum _arrayRotationFindMaxSum = new ArrayRotationFindMaxSum();
         ArrayRotationCount _arrayRotationCount = new ArrayRotationCount();
-
+        ArrayRotationMultiply _arrayRotationMultiply = new ArrayRotationMultiply();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -104,6 +104,17 @@ namespace XUnitTestProject.Arrays
             var result = _arrayRotationCount.GetRotationCountWithBinaryTree(arr, 0, n - 1);
 
             Assert.Equal(2, result);
+        }
+
+        [Fact]
+        public void Test_ArrayRotationMultiply()
+        {
+            var arr = new[] { 15, 18, 2, 3, 6, 12 };
+            int n = arr.Length;
+
+            var result = _arrayRotationMultiply.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
+
+            Assert.True(result);
         }
     }
 }
