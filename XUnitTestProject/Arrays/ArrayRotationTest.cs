@@ -94,5 +94,16 @@ namespace XUnitTestProject.Arrays
 
             Assert.Equal(2, result);
         }
+
+        [Fact]
+        public void Test_ArrayRotationCountWithBinaryTree()
+        {
+            var arr = new[] { 15, 18, 2, 3, 6, 12 };
+            int n = arr.Length;
+
+            var result = _arrayRotationCount.GetRotationCountWithBinaryTree(arr, 0, n - 1);
+
+            Assert.Equal(2, result);
+        }
     }
 }
