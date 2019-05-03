@@ -1,6 +1,6 @@
 ﻿namespace C_Sharp_Practice.Arrays
 {
-    public class ArrayRotationMultiply
+    public class ArrayRotationMultiplyOptimized
     {
         public bool GetArraysRotations(int[] arr)
         {
@@ -10,24 +10,24 @@
             preProcess(arr, n, tmp);
 
             int k = 2;
-            leftRotate(arr, n, k, tmp);
+            leftRotate(arr, n, k);
 
             k = 3;
-            leftRotate(arr, n, k, tmp);
+            leftRotate(arr, n, k);
 
             k = 4;
-            leftRotate(arr, n, k, tmp);
+            leftRotate(arr, n, k);
 
             return true;
         }
 
-        private void leftRotate(int[] arr, int n, int k, int[] tmp)
+        private void leftRotate(int[] arr, int n, int k)
         {
-            int start = k % n;
+
             var output = "";
-            for (int i = start; i < start + n; i++)
+            for (int i = k; i < k + n; i++)
             {
-                output += tmp[i] + " ";
+                output += arr[i % n] + " ";
             }
         }
 

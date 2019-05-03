@@ -14,6 +14,7 @@ namespace XUnitTestProject.Arrays
         ArrayRotationFindMaxSum _arrayRotationFindMaxSum = new ArrayRotationFindMaxSum();
         ArrayRotationCount _arrayRotationCount = new ArrayRotationCount();
         ArrayRotationMultiply _arrayRotationMultiply = new ArrayRotationMultiply();
+        ArrayRotationMultiplyOptimized _arrayRotationMultiplyOptimized = new ArrayRotationMultiplyOptimized();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -113,6 +114,17 @@ namespace XUnitTestProject.Arrays
             int n = arr.Length;
 
             var result = _arrayRotationMultiply.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void Test_ArrayRotationMultiplyOptimized()
+        {
+            var arr = new[] { 15, 18, 2, 3, 6, 12 };
+            int n = arr.Length;
+
+            var result = _arrayRotationMultiplyOptimized.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
 
             Assert.True(result);
         }
