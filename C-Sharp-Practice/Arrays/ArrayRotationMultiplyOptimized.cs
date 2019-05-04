@@ -23,7 +23,6 @@
 
         private void leftRotate(int[] arr, int n, int k)
         {
-
             var output = "";
             for (int i = k; i < k + n; i++)
             {
