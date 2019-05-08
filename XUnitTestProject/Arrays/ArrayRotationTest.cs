@@ -110,10 +110,7 @@ namespace XUnitTestProject.Arrays
 
         [Fact]
         public void Test_ArrayRotationMultiply()
-        {
-            var arr = new[] { 15, 18, 2, 3, 6, 12 };
-            int n = arr.Length;
-
+        {           
             var result = _arrayRotationMultiply.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
 
             Assert.True(result);
@@ -121,10 +118,7 @@ namespace XUnitTestProject.Arrays
 
         [Fact]
         public void Test_ArrayRotationMultiplyOptimized()
-        {
-            var arr = new[] { 15, 18, 2, 3, 6, 12 };
-            int n = arr.Length;
-
+        {           
             var result = _arrayRotationMultiplyOptimized.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
 
             Assert.True(result);
