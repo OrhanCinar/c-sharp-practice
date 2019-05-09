@@ -16,6 +16,7 @@ namespace XUnitTestProject.Arrays
         ArrayRotationMultiply _arrayRotationMultiply = new ArrayRotationMultiply();
         ArrayRotationMultiplyOptimized _arrayRotationMultiplyOptimized = new ArrayRotationMultiplyOptimized();
         ArrayMinimumElementSorted _arrayMinimumElementSorted = new ArrayMinimumElementSorted();
+        ArrayRightRotation _arrayRightRotation = new ArrayRightRotation();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -133,6 +134,19 @@ namespace XUnitTestProject.Arrays
             var result = _arrayMinimumElementSorted.FindMin(arr, 0, n - 1);
 
             Assert.Equal(1, result);
+        }
+
+        [Fact]
+        public void Test_ArrayRightRotation()
+        {
+            var arr = new[] { 1, 2, 3, 4, 5,6, 7, 8, 9, 10 };
+            int k = 3; // rotation count
+            int n = arr.Length;
+            var expected = new[] { 8, 9, 10,1, 2, 3, 4, 5, 6, 7 };
+
+            var result = _arrayRightRotation.RightRotate(arr, k, n);
+
+            Assert.Equal(expected, result);
         }
     }
 }
