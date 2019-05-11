@@ -18,7 +18,7 @@ namespace XUnitTestProject.Arrays
         ArrayMinimumElementSorted _arrayMinimumElementSorted = new ArrayMinimumElementSorted();
         ArrayRightRotation _arrayRightRotation = new ArrayRightRotation();
         ArrayRotationMaximumHammingDistance _arrayRotationMaximumHammingDistance = new ArrayRotationMaximumHammingDistance();
-
+        ArrayRotationPrintLeft _arrayRotationPrintLeft = new ArrayRotationPrintLeft();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -160,6 +160,20 @@ namespace XUnitTestProject.Arrays
             var result = _arrayRotationMaximumHammingDistance.GetMaximumHammingDistance(arr, n);
 
             Assert.Equal(4, result);
-        }        
+        }
+
+        [Fact]
+        public void Test_ArrayRotationPrintLeft()
+        {
+            var arr = new[] { 1, 3, 5, 7, 9 };
+            int n = arr.Length;
+            int k = 2;
+            string expected = "5 7 9 1 3 ";
+
+            var result = _arrayRotationPrintLeft.PrintLeft(arr, n, k);
+            Assert.Equal(expected, result);
+        }
+        
+
     }
 }
