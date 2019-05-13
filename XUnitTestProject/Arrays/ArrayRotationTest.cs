@@ -20,6 +20,7 @@ namespace XUnitTestProject.Arrays
         ArrayRotationMaximumHammingDistance _arrayRotationMaximumHammingDistance = new ArrayRotationMaximumHammingDistance();
         ArrayRotationPrintLeft _arrayRotationPrintLeft = new ArrayRotationPrintLeft();
         ArrayRotationElementIndex _arrayRotationElementIndex = new ArrayRotationElementIndex();
+        ArraySplit _arraySplit = new ArraySplit();
 
         [Fact]
         public void Test_ArrayRoration1()
@@ -114,7 +115,7 @@ namespace XUnitTestProject.Arrays
 
         [Fact]
         public void Test_ArrayRotationMultiply()
-        {           
+        {
             var result = _arrayRotationMultiply.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
 
             Assert.True(result);
@@ -122,7 +123,7 @@ namespace XUnitTestProject.Arrays
 
         [Fact]
         public void Test_ArrayRotationMultiplyOptimized()
-        {           
+        {
             var result = _arrayRotationMultiplyOptimized.GetArraysRotations(new[] { 1, 3, 5, 7, 9 });
 
             Assert.True(result);
@@ -142,10 +143,10 @@ namespace XUnitTestProject.Arrays
         [Fact]
         public void Test_ArrayRightRotation()
         {
-            var arr = new[] { 1, 2, 3, 4, 5,6, 7, 8, 9, 10 };
+            var arr = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int k = 3; // rotation count
             int n = arr.Length;
-            var expected = new[] { 8, 9, 10,1, 2, 3, 4, 5, 6, 7 };
+            var expected = new[] { 8, 9, 10, 1, 2, 3, 4, 5, 6, 7 };
 
             var result = _arrayRightRotation.RightRotate(arr, k, n);
 
@@ -179,15 +180,26 @@ namespace XUnitTestProject.Arrays
         [Fact]
         public void Test_ArrayRotationElementIndex()
         {
-            var arr = new[] { 1, 2, 3, 4, 5 };            
+            var arr = new[] { 1, 2, 3, 4, 5 };
             int rotations = 2;
             int[,] ranges = { { 0, 2 }, { 0, 3 } };
             int index = 1;
             int expected = 3;
 
-            var result = _arrayRotationElementIndex.FindElement(arr,ranges, rotations, index);
+            var result = _arrayRotationElementIndex.FindElement(arr, ranges, rotations, index);
             Assert.Equal(expected, result);
         }
-       
+
+        [Fact]
+        public void Test_ArraySplit()
+        {
+            var arr = new[] { 12, 10, 5, 6, 52, 36 };
+            int n = arr.Length;
+            int k = 2;
+            var expected = new[] { 5, 6, 52, 36, 12, 10 };
+
+            var result = _arraySplit.GetSplitArray(arr, n, k);
+            Assert.Equal(expected, result);
+        }
     }
 }
