@@ -1,4 +1,6 @@
-﻿namespace C_Sharp_Practice.Arrays
+﻿using System.Collections.Generic;
+
+namespace C_Sharp_Practice.Arrays
 {
     public class ArrayReArrange
     {
@@ -6,7 +8,7 @@
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] != -1 && arr[i] != i) 
+                if (arr[i] != -1 && arr[i] != i)
                 {
                     int x = arr[i];
 
@@ -25,6 +27,30 @@
                     {
                         arr[i] = -1;
                     }
+                }
+            }
+
+            return arr;
+        }
+
+        public int[] ReArrangeArray2(int[] arr)
+        {
+            HashSet<int> hashTable = new HashSet<int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                hashTable.Add(arr[i]);
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (hashTable.Contains(i))
+                {
+                    arr[i] = i;
+                }
+                else
+                {
+                    arr[i] = -1;
                 }
             }
 
