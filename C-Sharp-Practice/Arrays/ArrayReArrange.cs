@@ -56,5 +56,24 @@ namespace C_Sharp_Practice.Arrays
 
             return arr;
         }
+
+        public int[] ReArrangeArraySwap(int[] arr)
+        {
+            for (int i = 0; i < arr.Length;)
+            {
+                if (arr[i] >= 0 && arr[i] != i)
+                {
+                    int element = arr[arr[i]];
+                    arr[arr[i]] = arr[i];
+                    arr[i] = element;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            return arr;
+        }
     }
 }
