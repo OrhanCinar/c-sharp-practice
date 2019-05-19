@@ -17,5 +17,22 @@
 
             return arr;
         }
+
+
+        public int[] ReverseArrayRecursive(int[] arr, int start, int end)
+        {
+            int tmp;
+
+            if (start >= end)
+                return arr;
+
+            tmp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = tmp;
+
+            ReverseArrayRecursive(arr, ++start, --end);
+
+            return arr;
+        }
     }
 }
