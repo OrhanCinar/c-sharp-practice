@@ -75,5 +75,36 @@ namespace C_Sharp_Practice.Arrays
 
             return arr;
         }
+
+        public int[] ReArrangePositiveNegative(int[] arr, int n)
+        {
+            int i = -1;
+            int tmp = 0;
+
+            for (int j = 0; j < n; j++)
+            {
+                if (arr[j] < 0)
+                {
+                    i++;
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+
+            int pos = i + 1;
+            int neg = 0;
+
+            while (pos < n && neg < pos && arr[neg] < 0)
+            {
+                tmp = arr[neg];
+                arr[neg] = arr[pos];
+                arr[pos] = tmp;
+                pos++;
+                neg += 2;
+            }
+
+            return arr;
+        }
     }
 }
