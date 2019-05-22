@@ -30,5 +30,17 @@ namespace XUnitTestProject.Arrays
             var expected = new[] { -1, 1, 2, 3, 4, -1, 6, -1, -1, 9 };
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Test_ReArrangePositiveNegative()
+        {
+            var arr = new[] { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+
+            int n = arr.Length;
+
+            var result = _arrayReArrange.ReArrangePositiveNegative(arr, n);
+            var expected = new[] { 4, -3, 5, -1, 6, -7, 2, 8, 9 };
+            Assert.Equal(expected, result);
+        }
     }
 }
