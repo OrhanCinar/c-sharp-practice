@@ -17,15 +17,4 @@
     <ProjectReference Include="..\C-Sharp-Practice\C-Sharp-Practice.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Graphs\" />
-    <Folder Include="HashingFunctions\" />
-    <Folder Include="HashTables\" />
-    <Folder Include="Heaps\" />
-    <Folder Include="Lists\" />
-    <Folder Include="PriorityQueues\" />
-    <Folder Include="SortedCollections\" />
-    <Folder Include="Trees\" />
-  </ItemGroup>
-
 </Project>
