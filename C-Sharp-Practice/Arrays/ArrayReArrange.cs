@@ -106,5 +106,53 @@ namespace C_Sharp_Practice.Arrays
 
             return arr;
         }
+
+        public int[] ReArrangePositiveNegativeAlternate(int[] arr, int n)
+        {
+            int outOfPlace = -1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (outOfPlace >= 0)
+                {
+                    if ((arr[i] >= 0 && arr[outOfPlace] < 0) || (arr[i] < 0 && arr[outOfPlace] >= 0))
+                    {
+                        RightRotate(arr, n, outOfPlace, i);
+
+                        if (i - outOfPlace > 2)
+                        {
+                            outOfPlace = outOfPlace + 2;
+                        }
+                        else
+                        {
+                            outOfPlace = -1;
+                        }
+                    }
+                }
+
+                if (outOfPlace == -1)
+                {
+
+                    if (((arr[i] >= 0) && ((i & 0x01) == 0)) || ((arr[i] < 0) && (i & 0x01) == 1))
+                    {
+                        outOfPlace = i;
+                    }
+                }
+            }
+
+
+            return arr;
+        }
+
+        private void RightRotate(int[] arr, int n, int outOfPlace, int curr)
+        {
+            int tmp = arr[curr];
+            for (int i = curr; i > outOfPlace; i--)
+            {
+                arr[i] = arr[i - 1];
+            }
+
+            arr[outOfPlace] = tmp;
+        }
     }
 }
