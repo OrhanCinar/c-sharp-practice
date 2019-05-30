@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace C_Sharp_Practice.Arrays
+﻿namespace C_Sharp_Practice.Arrays
 {
     public class ArrayReArrange
     {
@@ -139,7 +137,6 @@ namespace C_Sharp_Practice.Arrays
                     }
                 }
             }
-
 
             return arr;
         }
