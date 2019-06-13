@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace C_Sharp_Practice.Arrays
 {
@@ -152,6 +153,29 @@ namespace C_Sharp_Practice.Arrays
             }
 
             arr[outOfPlace] = tmp;
+        }
+
+        public int[] ReArrangeEvens(int[] arr, int n)
+        {
+            Array.Sort(arr);
+
+            int[] ans = new int[n];
+            int p = 0;
+            int q = n - 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if ((i + 1) % 2 == 0)
+                {
+                    ans[i] = arr[q--];
+                }
+                else
+                {
+                    ans[i] = arr[p++];
+                }
+            }
+
+            return ans;
         }
     }
 }
