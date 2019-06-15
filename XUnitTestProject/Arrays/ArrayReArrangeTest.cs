@@ -58,5 +58,18 @@ namespace XUnitTestProject.Arrays
             var expected = new[] { -5, 5, -2, 2, -8, 4, 7, 1, 8, 0 };
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Test_ReArrangeEvens()
+        {
+            var arr = new[] { 1, 3, 2, 2, 5 };
+
+            int n = arr.Length;
+
+            var result = _arrayReArrange.ReArrangeEvens(arr, n);
+            var expected = new[] { 1, 5, 2, 3, 2 };
+            Assert.Equal(expected, result);
+        }
+
     }
 }
