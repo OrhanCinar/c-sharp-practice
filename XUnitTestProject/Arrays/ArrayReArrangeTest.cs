@@ -38,7 +38,6 @@ namespace XUnitTestProject.Arrays
         public void Test_ReArrangePositiveNegative()
         {
             var arr = new[] { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
-
             int n = arr.Length;
 
             var result = _arrayReArrange.ReArrangePositiveNegative(arr, n);
@@ -51,7 +50,6 @@ namespace XUnitTestProject.Arrays
         public void Test_ReArrangePositiveNegativeAlternate()
         {
             var arr = new[] { -5, -2, 5, 2, 4, 7, 1, 8, 0, -8 };
-
             int n = arr.Length;
 
             var result = _arrayReArrange.ReArrangePositiveNegativeAlternate(arr, n);
@@ -63,7 +61,6 @@ namespace XUnitTestProject.Arrays
         public void Test_ReArrangeEvens()
         {
             var arr = new[] { 1, 3, 2, 2, 5 };
-
             int n = arr.Length;
 
             var result = _arrayReArrange.ReArrangeEvens(arr, n);
