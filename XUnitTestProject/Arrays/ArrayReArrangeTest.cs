@@ -68,5 +68,16 @@ namespace XUnitTestProject.Arrays
             Assert.Equal(expected, result);
         }
 
+
+        [Fact]
+        public void Test_ReArrangeSmallest()
+        {
+            var arr = new[] { 5, 8, 1, 4, 2, 9, 3, 7, 6 };
+            int n = arr.Length;
+
+            var result = _arrayReArrange.ReArrangeSmallest(arr, n);
+            var expected = new[] { 1, 9, 2, 8, 3, 7, 4, 6, 5 };
+            Assert.Equal(expected, result);
+        }
     }
 }
