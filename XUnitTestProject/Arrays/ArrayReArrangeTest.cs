@@ -79,5 +79,17 @@ namespace XUnitTestProject.Arrays
             var expected = new[] { 1, 9, 2, 8, 3, 7, 4, 6, 5 };
             Assert.Equal(expected, result);
         }
+
+
+        [Fact]
+        public void Test_DoubleELemensMoveZeroEnd()
+        {
+            var arr = new[] { 0, 2, 2, 2, 0, 6, 6, 0, 0, 8 };
+            int n = arr.Length;
+
+            var result = _arrayReArrange.DoubleFirstElementMoveZeroEnd(arr, n);
+            var expected = new[] { 4, 2, 12, 8, 0, 0, 0, 0, 0, 0 };
+            Assert.Equal(expected, result);
+        }
     }
 }

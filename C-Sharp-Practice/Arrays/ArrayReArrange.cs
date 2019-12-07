@@ -165,14 +165,7 @@ namespace C_Sharp_Practice.Arrays
 
             for (int i = 0; i < n; i++)
             {
-                if ((i + 1) % 2 == 0)
-                {
-                    ans[i] = arr[q--];
-                }
-                else
-                {
-                    ans[i] = arr[p++];
-                }
+                ans[i] = (i + 1) % 2 == 0 ? arr[q--] : arr[p++];
             }
 
             return ans;
@@ -205,6 +198,51 @@ namespace C_Sharp_Practice.Arrays
             for (int i = 0; i < n; i++)
             {
                 arr[i] = tempArr[i];
+            }
+
+            return arr;
+        }
+
+        public int[] DoubleFirstElementMoveZeroEnd(int[] arr, int n)
+        {
+            if (n == 1)
+                return arr;
+
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (arr[i] != 0 && arr[i] == arr[i + 1])
+                {
+                    arr[i] = 2 * arr[i];
+
+                    arr[i + 1] = 0;
+                    i++;
+                }
+            }
+
+            arr = pushZeros(arr, n);
+
+
+            //local function
+            int[] pushZeros(int[] array, int n)
+            {
+                int count = 0;
+
+                for (int i = 0; i < n; i++)
+                {
+                    if (array[i] != 0)
+                    {
+                        array[count++] = array[i];
+                    }
+                }
+
+
+                while (count < n)
+                {
+                    array[count++] = 0;
+                }
+
+                return array;
             }
 
             return arr;
