@@ -45,7 +45,6 @@ namespace XUnitTestProject.Arrays
             Assert.Equal(expected, result);
         }
 
-
         [Fact]
         public void Test_ReArrangePositiveNegativeAlternate()
         {
@@ -68,7 +67,6 @@ namespace XUnitTestProject.Arrays
             Assert.Equal(expected, result);
         }
 
-
         [Fact]
         public void Test_ReArrangeSmallest()
         {
@@ -80,7 +78,6 @@ namespace XUnitTestProject.Arrays
             Assert.Equal(expected, result);
         }
 
-
         [Fact]
         public void Test_DoubleELemensMoveZeroEnd()
         {
@@ -90,6 +87,20 @@ namespace XUnitTestProject.Arrays
             var result = _arrayReArrange.DoubleFirstElementMoveZeroEnd(arr, n);
             var expected = new[] { 4, 2, 12, 8, 0, 0, 0, 0, 0, 0 };
             Assert.Equal(expected, result);
+        }
+        
+        [Fact]
+        public void Test_ReOrderArrayByIndex()
+        {
+            int[] arr = new int[] { 50, 40, 70, 60, 90 };
+            int[] index = new int[] { 3, 0, 4, 1, 2 };
+
+            var result = _arrayReArrange.ReOrderArrayByIndex(arr, index);
+            var expectedArray = new[] { 40, 60, 90, 50, 70 };
+            var expectedIndex = new[] { 0, 1, 2, 3, 4 };
+
+            Assert.Equal(expectedArray, result.Item1);
+            Assert.Equal(expectedIndex, result.Item2);
         }
     }
 }

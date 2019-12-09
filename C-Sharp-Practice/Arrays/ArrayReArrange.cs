@@ -247,5 +247,24 @@ namespace C_Sharp_Practice.Arrays
 
             return arr;
         }
+
+        public Tuple<int[], int[]> ReOrderArrayByIndex(int[] arr, int[] index)
+        {
+            var tmpArr = new int[arr.Length];
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                tmpArr[index[i]] = arr[i];
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = tmpArr[i];
+                index[i] = i;
+            }
+
+            return new Tuple<int[], int[]>(arr, index);
+        }
     }
 }
