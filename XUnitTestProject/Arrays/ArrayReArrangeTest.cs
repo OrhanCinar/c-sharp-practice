@@ -102,5 +102,17 @@ namespace XUnitTestProject.Arrays
             Assert.Equal(expectedArray, result.Item1);
             Assert.Equal(expectedIndex, result.Item2);
         }
+
+        [Fact]
+        public void Test_SortArrayWithoutChangeNegative()
+        {
+            var  arr = new int[] { 2, -6, -3, 8, 4, 1 };
+            var expectedArray = new int[] { 1, -6, -3, 2, 4, 8 };
+
+            var result = _arrayReArrange.SortArrayWithoutChangeNegative(arr, arr.Length);
+                            
+            Assert.Equal(expectedArray, result);
+        }
+
     }
 }

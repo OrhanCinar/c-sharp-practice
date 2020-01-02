@@ -266,5 +266,33 @@ namespace C_Sharp_Practice.Arrays
 
             return new Tuple<int[], int[]>(arr, index);
         }
+
+        public int[] SortArrayWithoutChangeNegative(int[] arr, int n)
+        {
+            var positiveValues = new List<int>();
+
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] >= 0)
+                {
+                    positiveValues.Add(arr[i]);
+                }
+            }
+
+            positiveValues.Sort();
+
+            int j = 0; // positive counter
+
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] >= 0)
+                {
+                    arr[i] = positiveValues[j];
+                    j++;
+                }
+            }
+
+            return arr;
+        }
     }
 }
