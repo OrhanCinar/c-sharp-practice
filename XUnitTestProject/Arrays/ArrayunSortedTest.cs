@@ -26,5 +26,15 @@ namespace XUnitTestProject.Arrays
             var actual = arrayUnsorted.FindKSmallestElementOptimized(arr, 0, arr.Length - 1, k);
             Assert.Equal(5, actual);
         }
+
+
+        [Fact]
+        public void Test_FindKSmallestElement2()
+        {
+            int[] arr = new int[] { 12, 3, 5, 7, 4, 19, 26 };
+            int k = 3;
+            var actual = arrayUnsorted.FindKSmallestElementOptimized(arr, 0, arr.Length - 1, k);
+            Assert.Equal(5, actual);
+        }
     }
 }
