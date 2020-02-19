@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace C_Sharp_Practice.PatternSearch
 {
@@ -19,7 +17,6 @@ namespace C_Sharp_Practice.PatternSearch
             int i = 0;
             while (i < n)
             {
-
                 if (pat[j] == text[i])
                 {
                     j++;
@@ -39,7 +36,7 @@ namespace C_Sharp_Practice.PatternSearch
                     }
                     else
                     {
-                        i = i + 1;
+                        i += 1;
                     }
                 }
             }
@@ -74,7 +71,6 @@ namespace C_Sharp_Practice.PatternSearch
                     }
                 }
             }
-
         }
     }
 }
