@@ -11,8 +11,8 @@ namespace C_Sharp_Practice.PatternSearch
             int m = pat.Length;
             int n = txt.Length;
             int i, j = 0;
-            int p = 0; // has value for pattern
-            int t = 0; // hach value for txt
+            int p = 0; // hash value for pattern
+            int t = 0; // hash value for txt
             int h = 1;
             int d = 256;
             List<int> patternList = new List<int>();
