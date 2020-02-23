@@ -13,6 +13,7 @@ namespace XUnitTestProject.PatternSearch
         [Fact]
         public void TestLongestIncreasingSubsequence()
         {
+           
             List<int> sequence = new List<int>
             {
                 12,
@@ -26,5 +27,7 @@ namespace XUnitTestProject.PatternSearch
             var actual = longestIncreasingSubsequence.Search(sequence);
             Assert.Equal(4, actual);
         }
+
+       
     }
 }
