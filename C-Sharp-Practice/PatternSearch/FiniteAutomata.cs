@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace C_Sharp_Practice.PatternSearch
 {
     public class FiniteAutomata
     {
-        static int NO_OF_CHARS = 256;
+        private static int NO_OF_CHARS = 256;
+
         public List<int> Search(char[] pat, char[] txt)
         {
             int m = pat.Length;
@@ -29,7 +28,6 @@ namespace C_Sharp_Practice.PatternSearch
                 }
             }
 
-
             return patternList;
         }
 
@@ -41,8 +39,7 @@ namespace C_Sharp_Practice.PatternSearch
             {
                 for (x = 0; x < NO_OF_CHARS; ++x)
                 {
-                    TF[state][x] = getNextState(pat, M,
-                                                state, x);
+                    TF[state][x] = getNextState(pat, M,state, x);
                 }
             }
         }
@@ -50,26 +47,25 @@ namespace C_Sharp_Practice.PatternSearch
         public static int getNextState(char[] pat, int M,
                                           int state, int x)
         {
-
-            // If the character c is same as next  
-            // character in pattern,then simply  
-            // increment state  
+            // If the character c is same as next
+            // character in pattern,then simply
+            // increment state
             if (state < M && (char)x == pat[state])
             {
                 return state + 1;
             }
 
-            // ns stores the result  
-            // which is next state  
+            // ns stores the result
+            // which is next state
             int ns, i;
 
-            // ns finally contains the longest  
-            // prefix which is also suffix in  
-            // "pat[0..state-1]c"  
+            // ns finally contains the longest
+            // prefix which is also suffix in
+            // "pat[0..state-1]c"
 
-            // Start from the largest possible   
-            // value and stop when you find a  
-            // prefix which is also suffix  
+            // Start from the largest possible
+            // value and stop when you find a
+            // prefix which is also suffix
             for (ns = state; ns > 0; ns--)
             {
                 if (pat[ns - 1] == (char)x)
@@ -102,6 +98,5 @@ namespace C_Sharp_Practice.PatternSearch
 
             return newArray;
         }
-
     }
 }
