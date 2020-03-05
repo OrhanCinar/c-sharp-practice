@@ -2,7 +2,7 @@ using C_Sharp_Practice;
 using C_Sharp_Practice.Sorting;
 using Xunit;
 
-namespace XUnitTestProject
+namespace XUnitTestProject.Sorting
 {
     public class BubbleSortRecursiveTest
     {

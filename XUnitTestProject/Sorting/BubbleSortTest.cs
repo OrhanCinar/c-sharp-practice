@@ -1,7 +1,7 @@
 using C_Sharp_Practice;
 using Xunit;
 
-namespace XUnitTestProject
+namespace XUnitTestProject.Sorting
 {
     public class SortTests
     {
