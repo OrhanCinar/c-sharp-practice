@@ -17,5 +17,14 @@ namespace XUnitTestProject.Sorting
             var expected = new[] { 5, 6, 11, 12, 13 };
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void TestInsertionSortRecursive()
+        {
+            int[] arr = { 12, 11, 13, 5, 6 };
+            var result = insertionSort.SortRecursive(arr, arr.Length);
+            var expected = new[] { 5, 6, 11, 12, 13 };
+            Assert.Equal(expected, result);
+        }
     }
 }
