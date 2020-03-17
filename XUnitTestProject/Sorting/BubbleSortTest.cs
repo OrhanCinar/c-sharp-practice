@@ -3,14 +3,9 @@ using Xunit;
 
 namespace XUnitTestProject.Sorting
 {
-    public class SortTests
+    public class BubbleSortTest
     {
-        BubbleSort bubbleSort;
-
-        public SortTests()
-        {
-            bubbleSort = new BubbleSort();
-        }
+        BubbleSort bubbleSort = new BubbleSort();
 
         [Fact]
         public void Test_BubbleSortAsc()
