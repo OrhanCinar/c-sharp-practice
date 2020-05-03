@@ -6,7 +6,7 @@ using Xunit;
 
 namespace XUnitTestProject.Sorting
 {
-    public class BitonicSortTest
+    public class LinearSearchTest
     {
         BitonicSort sort = new BitonicSort();
 
