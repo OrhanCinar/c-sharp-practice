@@ -4,13 +4,13 @@ using System.Text;
 
 namespace C_Sharp_Practice.DataStructures
 {
-    public class StackWİthQueue
+    public class StackWithDoubleQueue
     {
         private System.Collections.Queue q1 { get; set; }
         public System.Collections.Queue q2 { get; set; }
         private int curr_size { get; set; }
 
-        public StackWİthQueue()
+        public StackWithDoubleQueue()
         {
             q1 = new System.Collections.Queue();
             q2 = new System.Collections.Queue();
