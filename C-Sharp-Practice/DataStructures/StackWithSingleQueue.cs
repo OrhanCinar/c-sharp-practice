@@ -44,7 +44,7 @@ namespace C_Sharp_Practice.DataStructures
 
         bool IsEmpty()
         {
-            return q.Count > 0;
+            return q.Count == 0;
         }
     }
 }
