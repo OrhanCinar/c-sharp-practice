@@ -13,7 +13,7 @@ namespace XUnitTestProject.DataStructures
 
         [Fact]
 
-        public void TestStackInfixToPostfixT()
+        public void TestStackInfixToPostfix()
         {
             string exp = "a+b*(c^d-e)^(f+g*h)-i";
 
