@@ -54,7 +54,7 @@ namespace C_Sharp_Practice.Searching
                 }
                 else
                 {
-                    Console.Write(arr[r++] = " ");
+                    Console.Write(arr[r++] + " ");
                 }
             }
 
