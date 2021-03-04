@@ -9,7 +9,7 @@ namespace C_Sharp_Practice.Sorting
         public int KSmallest(int[] arr, int k)
         {
             Array.Sort(arr);
-            return[k - 1];
+            return arr[k - 1];
         }
     }
 }
