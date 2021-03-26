@@ -10,7 +10,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
     {
         public int Fib(int n)
         {
-            int f[n + 2];
+            int[] f = new int[n + 2];
             int i;
 
             f[0] = 0;
