@@ -15,7 +15,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
 
             for (i = 0; i <= n; i++)
             {
-                for (j = 0; j <= Math.Min(i, k; j++)
+                for (j = 0; j <= Math.Min(i, k); j++)
                 {
                     if (j == 0 || j == i)
                     {
