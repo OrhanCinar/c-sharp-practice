@@ -6,40 +6,39 @@ using System.Threading.Tasks;
 
 namespace C_Sharp_Practice.Dynamic_Programming
 {
-    class LongestSubSeqDiffAdjacents
+    class MaxLenSubSeqDiffBetweenAdjacent
     {
-        int LongestSubseqWithDiffOne(int[] arr, int n)
+        int MaxLenSub(int[] arr, int n)
         {
-            int[] dp = new int[n];
+            int[] mls = new int[n];
+            int max = 0;
 
             for (int i = 0; i < n; i++)
             {
-                dp[i] = 1;
+                mls[i] = 1;
             }
-
 
             for (int i = 1; i < n; i++)
             {
                 for (int j = 0; j < i; j++)
                 {
-                    if ((arr[i] == arr[j] + 1) || (arr[i] == arr[j] - 1))
+                    if (Math.Abs(arr[i] - arr[j]) <= 1 && mls[i] < mls[j] + 1)
                     {
-                        dp[i] = Math.Max(dp[i], dp[j] + 1);
+                        mls[i] = mls[j] + 1;
                     }
                 }
             }
 
-            int result = 1;
-
             for (int i = 0; i < n; i++)
             {
-                if (result < dp[i])
+                if (max < mls[i])
                 {
-                    result = dp[i];
+                    max = mls[i];
                 }
             }
 
-            return result;
+
+            return max;
         }
     }
 }
