@@ -13,6 +13,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
             int[,] C = new int[n + 1, k + 1];
 
             for (int i = 0; i <= n; i++)
+
             {
                 for (int j = 0; j <= Math.Min(i, k); j++)
                 {
