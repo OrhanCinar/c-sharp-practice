@@ -14,7 +14,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
 
             int[] lis = new int[n];
 
-            for (int i = 0; i < n; i++)
+            for (i = 0; i < n; i++)
             {
                 lis[i] = 1;
             }
@@ -39,7 +39,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
 
             for (i = n - 1; i >= 0; i--)
             {
-                for (int j = n - 1; j > i; j--)
+                for (j = n - 1; j > i; j--)
                 {
                     if (arr[i] > arr[j] && lds[i] < lds[j] + 1)
                     {
