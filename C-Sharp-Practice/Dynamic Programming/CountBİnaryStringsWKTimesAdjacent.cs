@@ -8,7 +8,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
 {
     internal class CountBİnaryStringsWKTimesAdjacent
     {
-        int CountStrings(int n, int k)
+        int CountStrings(int n, int k) 
         {
             int[,,] dp = new int[n + 1, k + 1, 2];
             dp[1, 0, 0] = 1;
