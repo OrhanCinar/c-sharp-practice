@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace C_Sharp_Practice.Dynamic_Programming
 {
-    internal class MaxAvgSUmPartitionArray
+    internal class MaxAvgSumPartitionArray
     {
         int MAX = 1000;
         double[,] memo;
 
-        public MaxAvgSUmPartitionArray()
+        public MaxAvgSumPartitionArray()
         {
             memo = new double[MAX, MAX];
         }
