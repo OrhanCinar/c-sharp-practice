@@ -20,7 +20,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
                 return 1;
             }
 
-            return (k * CountP(n - 1, k) + CountP(n - 1, k - 1);
+            return (k * CountP(n - 1, k) + CountP(n - 1, k - 1));
         }
     }
 }
