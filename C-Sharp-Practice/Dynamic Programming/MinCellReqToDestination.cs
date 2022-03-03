@@ -31,7 +31,7 @@ namespace C_Sharp_Practice.Dynamic_Programming
                         dp[i, j + mat[i, j]] = dp[i, j] + 1;
                     }
 
-                    if (dp[i, j] != int.MaxValue & (i + mat[i, j] < m && (dp[i, j] + 1) < dp[i + mat[i, j], j]{
+                    if (dp[i, j] != int.MaxValue & (i + mat[i, j] < m && (dp[i, j] + 1) < dp[i + mat[i, j], j])){
                         dp[i + mat[i, j], j] = dp[i, j] + 1;
                     }
                 }
