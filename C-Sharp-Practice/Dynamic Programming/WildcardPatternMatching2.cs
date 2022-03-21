@@ -46,6 +46,18 @@ namespace C_Sharp_Practice.Dynamic_Programming
                     return false;
                 }
             }
+
+            while (j < m && pat[j] == '*')
+            {
+                j++;
+            }
+
+            if (j == m)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
